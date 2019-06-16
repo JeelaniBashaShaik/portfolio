@@ -1,0 +1,23 @@
+  
+   <p class="title_desc"> This example Demonstrates the Pagination example for ngxdatagrid.<span [style.float]="'right'"> <a [href]="'https://github.com/JeelaniBashaShaik/ngxDataGrid/tree/master/src/app/examples/pagination'" [target]="'_blank'">View Code</a></span></p> 
+ <!--    <mat-form-field>
+        <mat-select placeholder="Load Type" [(ngModel)]="loadType" name="loadType" (change)="changeLoadType($event.value)">
+          <mat-option [value]="'virtualScroll'"> Virtual Scroll </mat-option>
+          <mat-option [value]="'pagination'"> Pagination </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+
+     <!--  <mat-form-field>
+          <mat-select placeholder="Count of Items" [(ngModel)]="randomCount" name="count" (change)="changeCount($event.value)">
+            <mat-option [value]="100"> 100</mat-option>
+            <mat-option [value]="500"> 500 </mat-option>
+            <mat-option [value]=500> 1000 </mat-option>
+            <mat-option [value]="2000"> 2000 </mat-option>
+            <mat-option [value]="5000"> 5000 </mat-option>
+          </mat-select>
+        </mat-form-field> -->
+        <div class="container topHeight flex-container">
+            <ngxdatagrid [rows]="dataArray" class="flex-item-grid" [showToolbar]="true" [loadType]="loadType" [forceColumnWidth]="false" [columns]="cols" [gridHeight]="400" [headerRowHeight]="30" [rowHeight]="30" [gridWidth]="700"></ngxdatagrid>
+</div>
+
+

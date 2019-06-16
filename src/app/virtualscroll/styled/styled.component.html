@@ -1,0 +1,17 @@
+<p class="title_desc">
+    This example demonstrates the usage of styled ngx-virtualscroll component. The scrollable list is enclosed inside a card without any borders and can be used as standalone without the need for external styling <span [style.float]= "'right'"><a [href]="'https://github.com/JeelaniBashaShaik/ngx-virtualscroll/tree/master/src/app/styled'" target="_blank">View Code</a></span>
+</p>
+<div class="flex-container">
+<ngx-virtualscroll class="flex-item-grid" [templateId]="abc" [rows]="rows" [itemHeight]=75 [styled]=true [width]=400 [height]=400></ngx-virtualscroll>
+</div>
+
+<ng-template #abc let-linkObj="linkObj">
+       <mz-card class="blue-grey darken-1 white-text" [horizontal]="true">
+       
+       <mz-card-content>
+         {{linkObj.title}}
+       </mz-card-content>
+      </mz-card>
+
+  </ng-template>
+    

@@ -1,0 +1,9 @@
+
+  <p class="title_desc"> Pre Select example for ngxdatagrid. Pass an array of objects from input rows to the [preSelectedRows] property<span [style.float]="'right'"> <a [href]="'https://github.com/JeelaniBashaShaik/ngxDataGrid/tree/master/src/app/examples/pre-select'" [target]="'_blank'">View Code</a></span></p>
+  
+              <ngxdatagrid [rows]="dataArray" [preSelectedRows]="selectedRows" [rowHeight]="30" (selectedData)="getSelectedData($event)" [selectionType]="'multiple'" [columns]="cols" [gridHeight]="'350'" [headerRowHeight]="'30'" [gridWidth]="'900'"></ngxdatagrid>
+
+  <p>Number of selected Rows: {{selectedRows.length}} </p>
+
+
+

@@ -1,0 +1,28 @@
+<p class="title_desc">
+  This example demonstrates how we can use two virtualscroll components in a single page. 
+</p>
+
+
+<div class="col s6 m6 l6 xl6">
+    <ngx-virtualscroll [templateId]="temp1" [rows]="rows" [itemHeight]=80 [styled]=true [width]=300 [height]=400></ngx-virtualscroll>
+</div>
+<div class="col s6 m6 l6 xl6">
+    <ngx-virtualscroll [templateId]="temp2" [rows]="rows1" [itemHeight]=80 [styled]=true [width]=300 [height]=400></ngx-virtualscroll>
+</div>
+
+<ng-template #temp1 let-linkObj="linkObj">
+    <mz-card style="background-color: lightgrey" [horizontal]="true" [hoverable]="true">
+    <mz-card-content>
+      <span style="color:black">{{linkObj.title}}</span>
+    </mz-card-content>
+   </mz-card>
+</ng-template>
+
+
+<ng-template #temp2 let-linkObj="linkObj">
+    <mz-card style="background-color: mediumpurple" [horizontal]="true" [hoverable]="true">
+    <mz-card-content>
+      <span style="color:black">{{linkObj.desc}}</span>
+    </mz-card-content>
+   </mz-card>
+</ng-template>

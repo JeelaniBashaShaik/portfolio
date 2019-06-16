@@ -1,0 +1,11 @@
+
+    <p class="title_desc"> This example demonstrates the inbuilt editable feature of ngxdatagrid. Just double click on the cell value to start editing. To make this happen, just set the 'editable' property on required column to boolean true<span [style.float]="'right'"> <a [href]="'https://github.com/JeelaniBashaShaik/ngxDataGrid/tree/master/src/app/examples/editable1'" [target]="'_blank'">View Code</a></span></p> 
+    <div class="container topHeight flex-container">
+            <ngxdatagrid [rows]="dataArray" class="flex-item-grid" [forceColumnWidth]="false" [columns]="cols" [gridHeight]="300" [headerRowHeight]="30" [rowHeight]="30" [gridWidth]="700"></ngxdatagrid>
+       </div>
+       <div style="margin-top:15px">
+    <p class="title_desc">This way of editing is fine if you just want to change the value. In case any validations have to be done on the edited value, then you might need to go for adding the cell-template.</p>
+    </div>
+
+
+

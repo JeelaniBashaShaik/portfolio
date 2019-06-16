@@ -1,0 +1,118 @@
+
+    <p class="title_desc"> This example demonstrates how to apply styles for ngxdatagrid. All these style properties could either be hardcoded or can be changed dynamically as shown below.<span [style.float]="'right'"> <a [href]="'https://github.com/JeelaniBashaShaik/ngxDataGrid/tree/master/src/app/examples/styled'" [target]="'_blank'">View Code</a></span></p> 
+        
+    <div class="row" style="margin-top: 15px">
+        <div class="col s3 m3 l3 xl3">
+                <mz-select-container [inline]="true">
+                        <select mz-select [label]="'Header Background Color'"
+                          [placeholder]="'Header Background Color'" [(ngModel)]="gridStyling.headerBgColor" name="headerBgColor">
+                            <option [value]="'red'">Red</option>
+                            <option [value]="'blue'">Blue</option>
+                            <option [value]="'green'">Green</option>
+                            <option [value]="'coral'">Coral</option>
+                        </select>
+                </mz-select-container>
+        </div>
+        <div class="col s3 m3 l3 xl3">
+                <mz-select-container [inline]="true">
+                        <select mz-select [label]="'Header Font Color'"
+                          [placeholder]="'Header Font Color'" [(ngModel)]="gridStyling.headerFontColor" name="headerFontColor">
+                            <option [value]="'white'">White</option>
+                            <option [value]="'black'">Black</option>
+                        </select>
+                </mz-select-container>
+        </div>
+        <div class="col s3 m3 l3 xl3">
+                <mz-select-container [inline]="true">
+                        <select mz-select [label]="'Toolbar background Color'"
+                          [placeholder]="'Toolbar background Color'" [(ngModel)]="gridStyling.toolbarBgColor" name="toolbarBgColor">
+                          <option [value]="'red'">Red</option>
+                          <option [value]="'blue'">Blue</option>
+                          <option [value]="'green'">Green</option>
+                          <option [value]="'coral'">Coral</option>
+                        </select>
+                </mz-select-container>
+        </div>
+        <div class="col s3 m3 l3 xl3">
+                <mz-select-container [inline]="true">
+                        <select mz-select [label]="'Paginator background Color'"
+                          [placeholder]="'Paginator background Color'" [(ngModel)]="gridStyling.paginatorBgColor" name="paginatorBgColor">
+                          <option [value]="'red'">Red</option>
+                          <option [value]="'blue'">Blue</option>
+                          <option [value]="'green'">Green</option>
+                          <option [value]="'coral'">Coral</option>
+                        </select>
+                </mz-select-container>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s3 m3 l3 xl3">
+            Toolbar
+                <mz-switch-container>
+                        <input mz-switch [(ngModel)]="showToolbar"
+                          id="switch-id"
+                          [off]="'Off'"
+                          [on]="'On'"
+                          type="checkbox">
+                      </mz-switch-container>
+        </div>
+        <div class="col s3 m3 l3 xl3">
+            Style Even/Odd
+                <mz-switch-container>
+                        <input mz-switch [(ngModel)]="gridStyling.showEvenOdd"
+                          id="switch-id"
+                          [off]="'Off'"
+                          [on]="'On'"
+                          type="checkbox">
+                      </mz-switch-container>
+        </div>
+        <div class="col s3 m3 l3 xl3">
+               Show Internal Borders
+                <mz-switch-container>
+                        <input mz-switch [(ngModel)]="gridStyling.showInsideBorders"
+                          id="switch-id"
+                          [off]="'Off'"
+                          [on]="'On'"
+                          type="checkbox">
+                      </mz-switch-container>
+        </div>
+        <div class="col s3 m3 l3 xl3">
+               Load Type
+                <mz-switch-container>
+                        <input mz-switch [(ngModel)]="virtualScroll"
+                        (ngModelChange)="paginatorChange($event)"
+                          id="switch-id"
+                          [off]="'Pagination'"
+                          [on]="'VirtualScoll'"
+                          type="checkbox">
+                      </mz-switch-container>
+        </div>
+    </div>
+   
+  <!--
+
+        <mat-grid-tile>
+            <mat-slide-toggle [color]="'primary'" (change)="toolbarChange($event)">Toolbar</mat-slide-toggle>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-slide-toggle [color]="'primary'" (change)="paginatorChange($event)">Paginator</mat-slide-toggle>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-slide-toggle [color]="'primary'" (change)="showBordersChange($event)">Show Internal Borders</mat-slide-toggle>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-slide-toggle [color]="'primary'" (change)="evenOddChange($event)">Style Even Odd Rows</mat-slide-toggle>
+        </mat-grid-tile> -->
+       
+
+    
+        <div class="container topHeight flex-container">
+            <ngxdatagrid [rows]="dataArray" class="flex-item-grid" [showToolbar]="showToolbar" [loadType]="loadType" [toolbarOptions]="gridToolbarOptions" [styles]="gridStyling" [columns]="cols" [gridHeight]="200" [headerRowHeight]="30" [rowHeight]="30" [gridWidth]="700"></ngxdatagrid>
+            </div>
+ 
+
+
+ 

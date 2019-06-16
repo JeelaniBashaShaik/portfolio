@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col s6 m2 l2">
+    <div class="container">
+      <h5>Sources</h5>
+      <hr/>
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'bbc'}" (click)="fetchNews(bbcNewsUrl);currentNews = 'bbc'">BBC</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'hindu'}" (click)="fetchNews(hinduNewsUrl);currentNews = 'hindu'">The Hindu</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'techRadar'}" (click)="fetchNews(techRadarNewsUrl);currentNews = 'techRadar'">Tech Radar</p>
+    
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'natGeo'}" (click)="fetchNews(natGeoNewsUrl);currentNews = 'natGeo'">Nat Geo</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'verge'}" (click)="fetchNews(vergeNewsUrl);currentNews = 'verge'">Verge</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'cnn'}" (click)="fetchNews(cnnUrl);currentNews = 'cnn'">CNN</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'dm'}" (click)="fetchNews(dailyMailUrl);currentNews = 'dm'">Daily Mail</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'gi'}" (click)="fetchNews(googleNewsUrl);currentNews = 'gi'">Google India</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'espnCric'}" (click)="fetchNews(espnCricUrl);currentNews = 'espnCric'">Espn Cric</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'toi'}" (click)="fetchNews(toiUrl);currentNews = 'toi'">Time Of India</p>
+
+        <p class="exampleName" [ngClass]="{activeRoute: currentNews == 'bi'}" (click)="fetchNews(biUrl);currentNews = 'bi'">Business Insider</p>
+ 
+    </div>
+  </div>
+  <div class="col s6 m10 l10 xl10" style="height:80vh;overflow-y:auto">
+    <app-news *ngIf="news.length > 0 else spinnerTemp" [newsData] = "news"></app-news>
+  </div>
+</div>
+
+<ng-template #spinnerTemp>
+  <!-- <div class="box">
+      <mz-spinner [color]="'blue'" [size]="'big'"></mz-spinner>
+  </div> -->
+  <div class="skeletons">
+      <div class="skeleton_box">
+        <div class="col s12 m6 l4 xl4" *ngFor="let item of six">
+          <div class="card" [style.height]="'285px'">
+              <div class="skeleton_image">
+              </div>
+              <div class="skeleton_title_content">
+              </div>
+          </div>
+        </div> 
+      </div>
+  </div>
+</ng-template>

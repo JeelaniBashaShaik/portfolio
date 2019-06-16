@@ -1,0 +1,50 @@
+ 
+
+
+<div class="row">
+  <div class="col s12 m2 l2">
+    <div class="container">
+      <h5>Contents</h5>
+        <hr/>
+      <p class="exampleName" routerLink="about" routerLinkActive="activeRoute">About</p>
+
+        <p class="exampleName" routerLink="basic" routerLinkActive="activeRoute">Basic</p>
+  
+        <p class="exampleName" routerLink="styled" routerLinkActive="activeRoute">Styled</p>
+
+        <p class="exampleName" routerLink="multiple" routerLinkActive="activeRoute">Multiple</p>
+
+    </div>
+  </div>
+
+  <div class="col s12 m8 l8"> 
+      <main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+          <router-outlet #o="outlet"></router-outlet>
+        </main>
+  </div>
+
+  <div class="col s12 m2 l2">
+      <div class="container">
+      <h5>Links</h5>
+      <hr/>
+      <p mz-button mz-tooltip
+      [tooltip]="'Takes you to the <b class=\'red-text\'>NPM</b> page'"
+      [position]="'top'"
+      [html]="true"
+      [delay]="50"><a class="linkName" [href]="'https://www.npmjs.com/package/@jb7/ngx-virtualscroll'" target="_blank">Npm</a></p>
+
+      <p mz-button mz-tooltip
+      [tooltip]="'Takes you to the <b class=\'red-text\'>GitHub</b> Repo'"
+      [position]="'top'"
+      [html]="true"
+      [delay]="50"><a class="linkName" [href]="'https://github.com/JeelaniBashaShaik/ngx-virtualscroll'" target="_blank">GitHub</a></p>
+
+      <p mz-button mz-tooltip
+      [tooltip]="'Takes you to the <b class=\'red-text\'>Demos</b> website'"
+      [position]="'top'"
+      [html]="true"
+      [delay]="50"><a class="linkName" [href]="'https://ngxvirtualscroll.firebaseapp.com'" target="_blank">Demos</a></p>
+    </div>
+    </div>
+
+</div> 

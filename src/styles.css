@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.title_desc{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.exampleName{
+    font-size: 16px;
+    color: black;
+}
+
+.exampleName:hover {
+    color: tomato;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.activeRoute{
+    border-left: 1px solid tomato;
+    padding-left: 5px;
+    color: tomato;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+p{
+    margin-block-start: 0em !important;
+    margin-block-end: 5px !important;
+    
+}
+
+*:focus {
+    outline: none;
+}
+
+.about_text{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.linkName{
+    font-size: 16px;
+    color: black;
+}
+
+.linkName:hover {
+    border-right: 1px solid tomato;
+    padding-right: 5px;
+    color: tomato;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.1s;
+}
+
+.topHeight{
+    margin-top: 10px;
+}
+
+
+    main {
+      position: relative;
+    }
+  router-outlet ~ * {
+      position: absolute;
+      width: 100%;
+    }
+  
+    .flex-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .flex-item-grid {
+        margin-top: 10px;
+    }
+
+    .fw_300 {
+        font-weight: 300;
+    }
+
+    .mini-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .no_margin {
+        margin: 0px;
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+
+    .flex-container-vertical {
+        display:flex;
+        height:40vh;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .rw {
+        cursor: pointer;
+    }

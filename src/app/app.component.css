@@ -1,0 +1,32 @@
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:cornflowerblue;
+ }
+
+ .breadcrumb{
+    color:tomato;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.breadcrumb:before {
+   content: '\E5CC';
+   vertical-align: top;
+   color: inherit;
+   font-family: 'Material Icons';
+   font-size: 25px;
+   margin: 0 10px 0 8px;
+   -webkit-font-smoothing: antialiased;
+}
+
+.lastRoute{
+    color: green;
+}
+
+marquee{
+    line-height: 30px;
+}

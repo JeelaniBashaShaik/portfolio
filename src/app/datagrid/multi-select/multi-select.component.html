@@ -1,0 +1,12 @@
+        <p class="title_desc"> Multi Select example for ngxdatagrid. Open console to view the selected Rows. Grid also supports shift-key selection<span [style.float]="'right'"> <a [href]="'https://github.com/JeelaniBashaShaik/ngxDataGrid/tree/master/src/app/examples/multi-select'" [target]="'_blank'">View Code</a></span></p>
+        <div class="container topHeight flex-container">
+                    <ngxdatagrid [rows]="dataArray" class="flex-item-grid" [rowHeight]="30" (selectedData)="getSelectedData($event)" [selectionType]="'multiple'" [columns]="cols" [gridHeight]="'350'" [headerRowHeight]="'30'" [gridWidth]="'700'"></ngxdatagrid>
+    
+        
+        </div>
+        <div style="margin-top:15px">
+                <p>Number of selected Rows: {{selectedRows.length}} </p>
+        </div>
+    
+    
+    

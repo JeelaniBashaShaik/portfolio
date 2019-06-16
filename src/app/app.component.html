@@ -1,0 +1,37 @@
+<!-- <mz-navbar [navbarClass]="navbar-fixed">
+  <a href="#" class="brand-logo">Jeelani Basha Shaik</a>
+  <mz-navbar-item-container [align]="'right'">
+    <mz-navbar-item><a [href]="'https://github.com/JeelaniBashaShaik'" [target]="'_blank'"><img src="/assets/github.svg" style="margin-top:10px" height="32" width="32"></a></mz-navbar-item>
+    <mz-navbar-item><a [href]="'https://www.npmjs.com/~jb7'" [target]="'_blank'"><img src="/assets/npm.svg"  height="52" width="52"></a></mz-navbar-item>
+    
+    
+  </mz-navbar-item-container>
+</mz-navbar> -->
+
+
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+          <a href="#" class="brand-logo" style="font-weight: 300;margin-left: 10px">Jeelani</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a routerLink="home/profile"><img src="/assets/Logo1.jpg" style="margin-top:10px;border-radius: 50%" height="28" width="28"></a></li>
+          <!-- <li><a [href]="'https://github.com/JeelaniBashaShaik'" [target]="'_blank'"><img src="/assets/github.svg" style="margin-top:10px" height="28" width="28"></a></li>
+          <li><a [href]="'https://www.npmjs.com/~jb7'" [target]="'_blank'"><img src="/assets/NPM.jpg"  style="margin-top:10px" height="28" width="62"></a></li> -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+<div>
+  
+<div class="row">
+    <div class="col s12">
+      <a *ngFor="let item of breadcrumbs;last as isLast" class="breadcrumb" [ngClass]="{'lastRoute':isLast}" routerLink={{item.path}}>{{item.name}}</a>
+    </div>
+</div>
+  <router-outlet></router-outlet>  
+</div>
+<!-- <div id="footer">
+    <marquee behavior="scroll" direction="left">Scrolling text...Scrolling text...Scrolling text...Scrolling text...Scrolling text...Scrolling text...Scrolling text...Scrolling text...</marquee>
+</div> -->
